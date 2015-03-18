@@ -39,9 +39,9 @@ use core::mem::replace;
 use core::default::Default;
 use alloc::boxed::Box;
 use collections::vec::Vec;
-use collections::slice::SliceExt;
-use collections::string::{String, ToString};
-use collections::str::StrExt;
+use core::slice::SliceExt;
+use std::string::{String, ToString};
+use core::str::StrExt;
 use std::borrow::Cow::{self, Borrowed};
 use std::collections::BTreeMap;
 
@@ -1343,7 +1343,7 @@ impl<Sink: TokenSink> Tokenizer<Sink> {
 mod test {
     use core::prelude::*;
     use collections::vec::Vec;
-    use collections::string::String;
+    use std::string::String;
     use super::{option_push, append_strings}; // private items
 
     #[test]
